@@ -1,0 +1,83 @@
+{
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cezaraugusto/zen-location.git"
+  },
+  "name": "zen-location",
+  "version": "1.0.0",
+  "description": "Approximates the current location of the Zen Browser across platforms.",
+  "homepage": "https://www.npmjs.com/package/zen-location",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "main": "./dist/index.cjs",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bin": {
+    "zen-location": "bin.cjs"
+  },
+  "scripts": {
+    "build": "rslib build",
+    "dev": "rslib build --watch",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "publishConfig": {
+    "provenance": true
+  },
+  "author": {
+    "name": "Cezar Augusto",
+    "email": "boss@cezaraugusto.net",
+    "url": "https://cezaraugusto.net"
+  },
+  "keywords": [
+    "zen",
+    "browser",
+    "spawn",
+    "location",
+    "process",
+    "guesstimate"
+  ],
+  "dependencies": {
+    "which": "^6.0.1"
+  },
+  "devDependencies": {
+    "@rslib/core": "^0.23.2",
+    "@types/node": "^26.1.1",
+    "@types/which": "^3.0.4",
+    "eslint": "^10.8.0",
+    "eslint-config-auditor": "^3.0.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
+  },
+  "packageManager": "pnpm@9.9.0+sha512.60c18acd138bff695d339be6ad13f7e936eea6745660d4cc4a776d5247c540d0edee1a563695c183a66eb917ef88f2b4feb1fc25f32a7adcadc7aaf3438e99c1",
+  "pnpm": {
+    "overrides": {
+      "vite": ">=7.3.5",
+      "vitest": ">=3.2.6",
+      "rollup": ">=4.59.0",
+      "minimatch": ">=9.0.7",
+      "picomatch": ">=4.0.4",
+      "postcss": ">=8.5.10",
+      "js-yaml": ">=4.2.0",
+      "brace-expansion": ">=2.0.2",
+      "tmp": ">=0.2.6",
+      "esbuild": ">=0.25.0"
+    }
+  },
+  "bugs": "https://github.com/cezaraugusto/zen-location/issues",
+  "engines": {
+    "node": ">=18"
+  },
+  "sideEffects": false
+}
